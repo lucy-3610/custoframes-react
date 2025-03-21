@@ -4,14 +4,15 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-storage.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBweVKxbsMtFT8-W70bGTuOE5iuubxWQJ0",
-    authDomain: "custoframes.firebaseapp.com",
-    projectId: "custoframes",
-    storageBucket: "custoframes.firebasestorage.app",
-    messagingSenderId: "423904022122",
-    appId: "1:423904022122:web:f0f852ed04e92144260413",
-    measurementId: "G-0XCCB0KEL2"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
+    measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
